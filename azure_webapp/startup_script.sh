@@ -1,1 +1,1 @@
-/bin/echo hello-world;
+/bin/echo echo "httpd started" && trap "exit 0;" TERM INT; httpd -v -p $PORT -h /www -f & wait
