@@ -1,1 +1,1 @@
-"/bin/echo hello-world;"
+/bin/echo hello-world;
