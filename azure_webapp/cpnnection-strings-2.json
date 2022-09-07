@@ -1,0 +1,14 @@
+[
+  {
+    "name": "CONN_STRING_3",
+    "value": "3",
+    "type": "MySql",
+    "slotSetting": true
+  },
+  {
+    "name": "CONN_STRING_4",
+    "value": "4",
+    "type": "MySql",
+    "slotSetting": false
+  }
+]
