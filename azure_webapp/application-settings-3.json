@@ -1,0 +1,12 @@
+[
+  {
+    "name": "APP_SETTING_5",
+    "value": "5",
+    "slotSetting": true
+  },
+  {
+    "name": "APP_SETTING_6",
+    "value": "6",
+    "slotSetting": false
+  }
+]
