@@ -1,1 +1,1 @@
-java -jar /home/site/wwwroot/spring-boot-hello.jar
+java -jar /home/site/wwwroot/app.jar
