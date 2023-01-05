@@ -26,11 +26,11 @@ EOF
 }
 
 remote_state {
-  backend = "azurerm"
+  backend = "azurerma"
   config = {
     key = "${path_relative_to_include()}/terraform.tfstate"
     subscription_id = "${local.subscription_id}"
-    resource_group_name  = "tfResourceGro"
+    resource_group_name  = "tfResourceGroup"
     storage_account_name = "vlicaterraformremoteback"
     container_name       = "azure-backend"
   }
