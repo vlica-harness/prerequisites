@@ -26,7 +26,7 @@ EOF
 }
 
 remote_state {
-  backend = "azurerma"
+  backend = "azurerm"
   config = {
     key = "${path_relative_to_include()}/terraform.tfstate"
     subscription_id = "${local.subscription_id}"
