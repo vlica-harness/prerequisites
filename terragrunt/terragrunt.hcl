@@ -30,7 +30,7 @@ remote_state {
   config = {
     key = "${path_relative_to_include()}/terraform.tfstate"
     subscription_id = "${local.subscription_id}"
-    resource_group_name  = "tfResourceGroupp"
+    resource_group_name  = "tfResourceGroup"
     storage_account_name = "vlicaterraformremoteback"
     container_name       = "azure-backend"
   }
