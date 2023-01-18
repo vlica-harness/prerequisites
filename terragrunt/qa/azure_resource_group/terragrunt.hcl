@@ -1,10 +1,9 @@
 terraform {
-  #source = "../..//modules/azure-resource-group-local"
   source = "github.com/rkoosaar/terraform-azurerm-resource-group//."
 }
 
 locals {
-    common_vars = read_terragrunt_config(find_in_parent_folders("commons.hcl"))
+  common_vars = read_terragrunt_config(find_in_parent_folders("commons.hcl"))
 }
 
 # Generate Azure providers
@@ -31,7 +30,7 @@ EOF
 remote_state {
   backend = "azurerm"
   config = {
-    key = "${path_relative_to_include()}/terraform.tfstate"
+    key = "qa/azure_resource_group/terraform.tfstate"
     subscription_id = local.common_vars.inputs.subscription_id
   }
   generate = {

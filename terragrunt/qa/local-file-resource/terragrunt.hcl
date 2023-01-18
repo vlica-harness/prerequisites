@@ -30,7 +30,7 @@ EOF
 remote_state {
   backend = "azurerm"
   config = {
-    key = "${path_relative_to_include()}/terraform.tfstate"
+    key = "qa/local-file-resource/terraform.tfstate"
     subscription_id = local.common_vars.inputs.subscription_id
   }
   generate = {
