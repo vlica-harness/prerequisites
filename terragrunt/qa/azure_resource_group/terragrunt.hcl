@@ -22,7 +22,6 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = local.common_vars.inputs.subscription_id
 }
 EOF
 }
@@ -38,7 +37,6 @@ remote_state {
     if_exists = "overwrite"
   }
 }
-
 
 inputs = {
        az_rg_name     = local.common_vars.inputs.rgname

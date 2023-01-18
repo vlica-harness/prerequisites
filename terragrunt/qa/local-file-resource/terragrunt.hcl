@@ -22,7 +22,6 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = local.common_vars.inputs.subscription_id
 }
 EOF
 }
