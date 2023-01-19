@@ -3,6 +3,9 @@ terraform {
   #source = "github.com/vlica-harness/prerequisites//terragrunt/modules/noop"
 }
 
+ENV1 = get_env("OS_USERNAME")
+
+
 include {
   path = find_in_parent_folders()
 }
