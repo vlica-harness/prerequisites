@@ -3,15 +3,13 @@ terraform {
   #source = "github.com/vlica-harness/prerequisites//terragrunt/modules/noop"
 }
 
-ENV1 = get_env("OS_USERNAME")
-
-
 include {
   path = find_in_parent_folders()
 }
 
 locals {
   common_vars = read_terragrunt_config(find_in_parent_folders("commons.hcl"))
+  ENV1 = get_env("OS_USERNAME")
 }
 
 inputs = {
