@@ -11,6 +11,7 @@ locals {
   common_vars = read_terragrunt_config(find_in_parent_folders("commons.hcl"))
   ENV1 = get_env("OS_USERNAME1")
   ENV2 = get_env("OS_USERNAME2")
+  ENV3 = get_env("OS_USERNAME3")
 }
 
 inputs = {
