@@ -6,7 +6,7 @@ inputs = merge(
     local.common_vars.inputs,
     {
         env = "stage"
-        subscription_id = "20d6a917-99fa-4b1b-9b2e-a3d624e9dcf0"
+        subscription_id = "12d2db62-5aa9-471d-84bb-faa489b3e319"
         rgname = "vl-test-rc-azure-stage"
     }
 )
