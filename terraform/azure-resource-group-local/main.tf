@@ -5,18 +5,6 @@ locals {
 
 # Resource Group
 
-resource "azurerm_resource_group" "az-rg" {
-  name     = var.az_rg_name
-  location = var.az_rg_location
-
-  tags = local.all_tags
-}
-
-
-provider "azurerm" {
-  features {}
-}
-
 terraform {
   backend "azurerm" {
     key                  = "vlica-test/terraform.tfstate"
@@ -25,4 +13,11 @@ terraform {
     storage_account_name = "vlicaterraformremoteback"
     container_name       = "vl-azure-test"
   }
+}
+
+resource "azurerm_resource_group" "az-rg" {
+  name     = var.az_rg_name
+  location = var.az_rg_location
+
+  tags = local.all_tags
 }
