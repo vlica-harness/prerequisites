@@ -1,7 +1,16 @@
-terraform {
-  cloud {
-    organization = "harness-dev"
+#terraform {
+#  cloud {
+#    organization = "harness-dev"
+#    workspaces {
+#      name = "vl_local_tf_cloud_1"
+#    }
+#  }
+#}
 
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "harness-dev"
     workspaces {
       name = "vl_local_tf_cloud_1"
     }
