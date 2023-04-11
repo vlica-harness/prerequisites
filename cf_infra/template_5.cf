@@ -2,7 +2,7 @@ Resources:
   SMS3JIZ4:
     Type: 'AWS::SecretsManager::Secret'
     Properties:
-      Name: MyNewSecretVL_3
+      Name: MyNewSecretVL_4
       SecretString: '{"username":"MasterUsername","password":"secret-password"}'
 Outputs:
   region:
