@@ -1,6 +1,3 @@
-Parameters:
-  Sname:
-    Type: 'String'
 Resources: 
   SMS3JIZ4:
     Type: 'AWS::SecretsManager::Secret'
