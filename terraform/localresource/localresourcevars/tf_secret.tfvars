@@ -1,1 +1,1 @@
-countt  = "${secrets.getValue("acc.tf_vlica_counts")}"
+countt  = ${secrets.getValue("tf_vlica_counts")}
