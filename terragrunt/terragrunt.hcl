@@ -25,20 +25,37 @@ provider "azurerm" {
 EOF
 }
 
-remote_state {
-  backend = "azurerm"
-  config = {
-    key = "${path_relative_to_include()}/terraform.tfstate"
-    subscription_id = "${local.subscription_id}"
-    resource_group_name  = "tfResourceGroup"
-    storage_account_name = "vlicaterraformremoteback"
-    container_name       = "azure-backend"
-  }
-  generate = {
-    path      = "_backend.tf"
-    if_exists = "overwrite"
-  }
-}
+ remote_state {
+   backend = "s3"
+   config = {
+     bucket = "vl-backend-bucket-tg-1"
+     key = "${path_relative_to_include()}/terraform.tfstate"
+     region = "us-east-1"
+     dynamodb_table = "vl-table-tg-remote-backend"
+     encrypt = true
+   }
+   generate = {
+     path      = "_backend.tf"
+     if_exists = "overwrite"
+   }
+ }
+
+
+
+# remote_state {
+#   backend = "azurerm"
+#   config = {
+#     key = "${path_relative_to_include()}/terraform.tfstate"
+#     subscription_id = "${local.subscription_id}"
+#     resource_group_name  = "tfResourceGroup"
+#     storage_account_name = "vlicaterraformremoteback"
+#     container_name       = "azure-backend"
+#   }
+#   generate = {
+#     path      = "_backend.tf"
+#     if_exists = "overwrite"
+#   }
+# }
 
 # export these env vars ARM_CLIENT_ID, ARM_CLIENT_SECRET, ARM_TENANT_ID
 # or put them in -backend-config file as below
