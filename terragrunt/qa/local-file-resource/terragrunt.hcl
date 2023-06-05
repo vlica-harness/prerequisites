@@ -20,23 +20,45 @@ terraform {
     }
 }
 
-provider "azurerm" {
-  features {}
+#provider "azurerm" {
+#  features {}
+#}
+#EOF
+#}
+
+
+provider "aws" {
+  region = "us-east-1"
 }
 EOF
 }
 
 remote_state {
-  backend = "azurerm"
+  backend = "s3"
   config = {
-    key = "qa/local-file-resource/terraform.tfstate"
-    subscription_id = local.common_vars.inputs.subscription_id
+    bucket = "vl-backend-bucket-tg-1"
+    key = "${path_relative_to_include()}/terraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "vl-table-tg-remote-backend"
+    encrypt = true
   }
   generate = {
-    path      = "_backend.tf"
-    if_exists = "overwrite"
+    path      = "backend.tf"
+    if_exists = "overwrite_terragrunt"
   }
 }
+
+#remote_state {
+#  backend = "azurerm"
+#  config = {
+#    key = "qa/local-file-resource/terraform.tfstate"
+#    subscription_id = local.common_vars.inputs.subscription_id
+#  }
+#  generate = {
+#    path      = "_backend.tf"
+#    if_exists = "overwrite"
+#  }
+#}
 
 inputs = {
   count_of_null_resources = 3

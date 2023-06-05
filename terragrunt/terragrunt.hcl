@@ -18,9 +18,15 @@ terraform {
     }
 }
 
-provider "azurerm" {
-  features {}
-  subscription_id = "${local.subscription_id}"
+#provider "azurerm" {
+#  features {}
+#  subscription_id = "${local.subscription_id}"
+#}
+#EOF
+#}
+
+provider "aws" {
+  region = "us-east-1"
 }
 EOF
 }
@@ -35,8 +41,8 @@ EOF
      encrypt = true
    }
    generate = {
-     path      = "_backend.tf"
-     if_exists = "overwrite"
+     path      = "backend.tf"
+     if_exists = "overwrite_terragrunt"
    }
  }
 
