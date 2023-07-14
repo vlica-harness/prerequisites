@@ -3,7 +3,7 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+  default = "t2.micro"
 }
 
 variable "my_aws_access_key" {
