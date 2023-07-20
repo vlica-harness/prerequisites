@@ -1,9 +1,9 @@
 terraform {
   #source = "../..//modules/azure-resource-group-local"
-  #source = "git@github.com:rkoosaar/terraform-azurerm-resource-group.git//."
+  source = "git@github.com:rkoosaar/terraform-azurerm-resource-group.git//."
   #source = "git::git@github.com:rkoosaar/terraform-azurerm-resource-group.git//."
   #source = "git::https://github.com/rkoosaar/terraform-azurerm-resource-group.git//."
-  source = "github.com/rkoosaar/terraform-azurerm-resource-group//."
+  #source = "github.com/rkoosaar/terraform-azurerm-resource-group//."  #no need of credentials
 }
 
 
