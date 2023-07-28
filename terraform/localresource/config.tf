@@ -1,5 +1,6 @@
 variable "countt" {
-  type = number
+  type    = number
+  default = "2"
 }
 
 resource "null_resource" "example" {
