@@ -18,6 +18,10 @@ terraform {
     }
 }
 
+provider "digitalocean" {
+  version = "2.3.0"
+}
+
 provider "azurerm" {
   features {}
   subscription_id = "${local.subscription_id}"
