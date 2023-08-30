@@ -53,9 +53,9 @@ EOF
    config = {
      key = "${path_relative_to_include()}/terraform.tfstate"
      subscription_id = "${local.subscription_id}"
-     resource_group_name  = "tfResourceGroup"
-     storage_account_name = "vlicaterraformremoteback"
-     container_name       = "azure-backend"
+     resource_group_name  = "terragrunt-testing-vl"
+     storage_account_name = "vlterragruntstoragetest"
+     container_name       = "vl-terragrunt-testing"
    }
    generate = {
      path      = "_backend.tf"
