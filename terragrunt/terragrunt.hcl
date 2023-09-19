@@ -1,7 +1,7 @@
 locals {
-  subscription_vars = read_terragrunt_config(find_in_parent_folders("subscription.hcl"))
+  #subscription_vars = read_terragrunt_config(find_in_parent_folders("subscription.hcl"))
 
-  subscription_id = local.subscription_vars.locals.subscription_id
+  subscription_id = "20d6a917-99fa-4b1b-9b2e-a3d624e9dcf0"
 }
 
 # Generate Azure providers

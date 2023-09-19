@@ -11,12 +11,8 @@ include {
   path = find_in_parent_folders()
 }
 
-locals {
-    common_vars = read_terragrunt_config(find_in_parent_folders("commons.hcl"))
-}
-
 inputs = {
-       az_rg_name     = local.common_vars.inputs.rgname
+       az_rg_name     = "terragrunt-testing-vl-from-tg"
        az_rg_location = "East US"
        az_tags = {
         Environment   = "test"
