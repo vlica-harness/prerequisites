@@ -3,8 +3,13 @@ variable "countt" {
   default = "2"
 }
 
+variable "counttt" {
+  type    = number
+  default = "2"
+}
+
 resource "null_resource" "example" {
-  count = var.countt
+  count = var.countt + var.counttt
   provisioner "local-exec" {
     command = "echo testlocallocaltesttestlocallocaltest"
   }
@@ -13,14 +18,4 @@ resource "null_resource" "example" {
 resource "local_file" "hello1" {
   content  = "Hello, Terraform"
   filename = "hello1.txt"
-}
-
-resource "local_file" "hello2" {
-  content  = "Hello, Terraform"
-  filename = "hello2.txt"
-}
-
-resource "local_file" "hello3" {
-  content  = "Hello, Terraform"
-  filename = "hello3.txt"
 }
