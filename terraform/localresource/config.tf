@@ -5,7 +5,7 @@ variable "countt" {
 
 variable "counttt" {
   type    = number
-  default = "2"
+  default = "4"
 }
 
 resource "null_resource" "example" {
