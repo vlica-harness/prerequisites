@@ -8,10 +8,10 @@ locals {
 terraform {
   backend "azurerm" {
     key                  = "vlica-test/terraform.tfstate"
-    subscription_id      = "12d2db62-5aa9-471d-84bb-faa489b3e319"
-    resource_group_name  = "tfResourceGroup"
-    storage_account_name = "vlicaterraformremoteback"
-    container_name       = "vl-azure-test"
+    subscription_id      = "20d6a917-99fa-4b1b-9b2e-a3d624e9dcf0"
+    resource_group_name  = "terragrunt-testing-vl"
+    storage_account_name = "vlterragruntstoragetest"
+    container_name       = "vl-terragrunt-testing"
   }
 }
 

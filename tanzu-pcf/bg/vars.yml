@@ -1,0 +1,3 @@
+APP_MEMORY: 250M
+INSTANCES: 1
+APP_NAME: vlica_bg_app

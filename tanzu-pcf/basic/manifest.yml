@@ -1,0 +1,7 @@
+applications:
+- name: vlica_git
+  instances: ((INSTANCES))
+  memory: ((APP_MEMORY))
+  routes:
+    - route: vlica_basic_appt.apps.tas-qa-setup.com
+

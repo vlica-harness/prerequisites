@@ -1,0 +1,6 @@
+applications:
+- name: ((APP_NAME))
+  instances: ((INSTANCES))
+  memory: ((APP_MEMORY))
+  routes:
+    - route: vlica_bg_app.apps.tas-harness.com
