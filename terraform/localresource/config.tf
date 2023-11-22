@@ -1,15 +1,10 @@
 variable "countt" {
-  type    = number
-  default = "2"
+  type = number
 }
 
-variable "counttt" {
-  type    = number
-  default = "4"
-}
 
 resource "null_resource" "example" {
-  count = var.countt + var.counttt
+  count = var.countt
   provisioner "local-exec" {
     command = "echo testlocallocaltesttestlocallocaltest"
   }
