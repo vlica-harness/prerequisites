@@ -2,9 +2,13 @@ variable "countt" {
   type = number
 }
 
+variable "counttt" {
+  type = number
+}
+
 
 resource "null_resource" "example" {
-  count = var.countt
+  count = var.countt + var.counttt
   provisioner "local-exec" {
     command = "echo testlocallocaltesttestlocallocaltest"
   }
