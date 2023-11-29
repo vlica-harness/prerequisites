@@ -1,0 +1,7 @@
+applications:
+- name: ${serviceVariable.name}
+  instances: ${serviceVariable.instances}
+  memory: ${serviceVariable.memory}
+  routes:
+    - route: vlicaa_basic_appt.apps.tas-qa-setup.com
+
