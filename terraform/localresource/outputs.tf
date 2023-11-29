@@ -1,5 +1,5 @@
 output "test-output-name1" {
-  value = "test-output-value1"
+  value = "test-out'put-value1"
 }
 
 output "test-output-name2" {
