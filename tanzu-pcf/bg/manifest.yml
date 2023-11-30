@@ -4,3 +4,5 @@ applications:
   memory: ((APP_MEMORY))
   routes:
     - route: vasttest_bg_app.apps.tas-qa-setup.com
+  env:
+    TEST_VAR3: ((TEST_VAR3_VALUE))
