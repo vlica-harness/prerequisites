@@ -1,4 +1,4 @@
-output "test-output-name1" {
+output "TEST_OUTPUT_NAME1" {
   value = "test-out'put-value1"
 }
 
