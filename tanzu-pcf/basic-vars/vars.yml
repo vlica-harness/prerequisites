@@ -3,3 +3,4 @@ INSTANCES: 1
 APP_NAME: vlica_basic
 ROUTE-1: ${serviceVariable.route1}
 TEST_VAR3_VALUE: ${serviceVariable.test_var_3}
+TEST_VAR4_VALUE: ${serviceVariable.test_var_4}

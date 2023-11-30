@@ -6,6 +6,7 @@ applications:
     TEST_VAR1: TEST_VAR_1_VALUE
     TEST_VAR2: ${serviceVariable.test_var_2}
     TEST_VAR3: '((TEST_VAR3_VALUE))'
+    TEST_VAR4: '((TEST_VAR4_VALUE))'
 
   routes:
     - route: ((ROUTE-1))
