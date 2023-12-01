@@ -1,0 +1,10 @@
+applications:
+- name: ${serviceVariable.name1}
+  instances: 1
+  memory: 250M
+  env:
+    TEST_VAR1: TEST_VAR_1_VALUE111
+    TEST_VAR2: ${serviceVariable.test_var_2}
+    TEST_VAR3: '((TEST_VAR3_VALUE))'
+  routes:
+    - route: ${serviceVariable.route1}
