@@ -1,7 +1,7 @@
 applications:
 - name: ${serviceVariable.name}
   instances: 1
-  memory: 250M
+  memory: 1024M
   env:
     TEST_VAR1: TEST_VAR_1_VALUE
     TEST_VAR2: ${serviceVariable.test_var_2}
