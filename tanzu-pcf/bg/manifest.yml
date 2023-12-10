@@ -3,4 +3,4 @@ applications:
   instances: ((INSTANCES))
   memory: ((APP_MEMORY))
   routes:
-    - route: vasttest_bg_app.apps.tas-qa-setup.com
+    - route: ((ACTIVE_ROUTE))
