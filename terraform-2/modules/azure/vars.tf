@@ -1,3 +1,0 @@
-variable "azureSecret" {
-  type = string
-}
