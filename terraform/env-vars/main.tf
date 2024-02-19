@@ -1,15 +1,15 @@
-variable "BASE_DIR" {
+variable "BASE_DIRR" {
   type = string
 }
 
-variable "SCRIPT_DIR" {
+variable "SCRIPT_DIRR" {
   type = string
 }
 
 output "base_dir" {
-  value = var.BASE_DIR
+  value = var.BASE_DIRR
 }
 
 output "script_dir" {
-  value = var.SCRIPT_DIR
+  value = var.SCRIPT_DIRR
 }
