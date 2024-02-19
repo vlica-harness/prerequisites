@@ -7,9 +7,9 @@ variable "SCRIPT_DIR" {
 }
 
 output "base_dir" {
-  value = var.BASE_DIRR
+  value = var.BASE_DIR
 }
 
 output "script_dir" {
-  value = var.SCRIPT_DIRR
+  value = var.SCRIPT_DIR
 }
