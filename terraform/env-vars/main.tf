@@ -1,8 +1,8 @@
-variable "BASE_DIRR" {
+variable "BASE_DIR" {
   type = string
 }
 
-variable "SCRIPT_DIRR" {
+variable "SCRIPT_DIR" {
   type = string
 }
 
