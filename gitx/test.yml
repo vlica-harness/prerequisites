@@ -1,0 +1,45 @@
+pipeline:
+  name: gitx-pipeline
+  identifier: gitxpipeline
+  projectIdentifier: vlterragrunt
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage-gitx
+        identifier: stagegitx
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: vl_terragrunt_service
+          environment:
+            environmentRef: vl_terragrunt_env
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: vl_terragrunt_infra
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: exit 1
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+            rollbackSteps: []
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: MarkAsFailure
