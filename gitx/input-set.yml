@@ -1,5 +1,6 @@
 inputSet:
   name: input-set-for-pipeline
+  tags: {}
   identifier: inputsetforpipeline
   orgIdentifier: default
   projectIdentifier: vlterragrunt
@@ -16,7 +17,7 @@ inputSet:
                     identifier: TerraformPlan_1
                     type: TerraformPlan
                     spec:
-                      provisionerIdentifier: asd131ad
+                      provisionerIdentifier: asd131ad1
                       configuration:
                         configFiles:
                           store:
