@@ -1,0 +1,26 @@
+inputSet:
+  name: input-set-for-pipeline
+  identifier: inputsetforpipeline
+  orgIdentifier: default
+  projectIdentifier: vlterragrunt
+  pipeline:
+    identifier: gitxpipeline
+    stages:
+      - stage:
+          identifier: stagegitx
+          type: Deployment
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: TerraformPlan_1
+                    type: TerraformPlan
+                    spec:
+                      provisionerIdentifier: asd131ad
+                      configuration:
+                        configFiles:
+                          store:
+                            type: Github
+                            spec:
+                              branch: main
+                              folderPath: terraform/localresource
