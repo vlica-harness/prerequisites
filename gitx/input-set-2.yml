@@ -1,0 +1,26 @@
+inputSet:
+  name: input-set-2
+  identifier: inputset2
+  orgIdentifier: default
+  projectIdentifier: vlterragrunt
+  pipeline:
+    identifier: gitxpipeline
+    stages:
+      - stage:
+          identifier: stagegitx
+          type: Deployment
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: TerraformPlan_1
+                    type: TerraformPlan
+                    spec:
+                      provisionerIdentifier: "1"
+                      configuration:
+                        configFiles:
+                          store:
+                            type: Github
+                            spec:
+                              branch: main
+                              folderPath: local
