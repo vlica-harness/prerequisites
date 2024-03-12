@@ -2,7 +2,7 @@ applications:
 - name: ((APP_NAME))
   instances: ((INSTANCES))
   memory: ((APP_MEMORY))
-  timeout: 120
+  timeout: 10
   staging_timeout: 300
   routes:
     - route: ((ACTIVE_ROUTE))
