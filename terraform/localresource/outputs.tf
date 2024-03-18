@@ -6,16 +6,14 @@ output "test-output-name2" {
   value = "test-output-value2"
 }
 
-output "result" {
-  value = {
-    "region" : "us-east-1",
-    "hostInstances" : [
-      {
-        "hostname" : "hostnamexxxx",
-        "defaultIpAddress" : "defaultyyyyy"
-      }
-    ],
-    "hostname" : "hostnamexxxx",
-    "defaultIpAddress" : "defaultyyyyy"
-  }
+
+output "hostInstancesss" {
+  value = [
+    {
+      region    = "region"
+      hostname  = "aws_instance.example.public_dns"
+      privateIp = "aws_instance.example.private_ip"
+      subnetId  = "aws_subnet.example.id"
+    }
+  ]
 }
