@@ -1,6 +1,8 @@
 applications:
-- name: ((APP_NAME))
-  instances: ((INSTANCES))
+- name: vasttest_bg_app
   memory: ((APP_MEMORY))
+  instances: ((INSTANCES))
+  env:
+    CF_STARTUP_TIMEOUT: 10
   routes:
-    - route: ((ACTIVE_ROUTE))
+  - route: ((ACTIVE_ROUTE))
