@@ -1,5 +1,5 @@
 applications:
-- name: vasttest_bg_app
+- name: vasttest_bg_app#vltest
   memory: ((APP_MEMORY))
   instances: ((INSTANCES))
   env:
