@@ -2,6 +2,8 @@ applications:
 - name: vasttest_bg_app#vltest
   memory: ((APP_MEMORY))
   instances: ((INSTANCES))
+  buildpacks:
+  - java_buildpack_beta
   env:
     CF_STARTUP_TIMEOUT: 10
   routes:
