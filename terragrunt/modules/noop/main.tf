@@ -9,4 +9,5 @@ resource "null_resource" "example" {
 module "fisierLocal" {
   source               = "../file"
   content_file_message = var.file_message
+  file_to_display      = var.file_to_show
 }

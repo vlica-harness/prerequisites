@@ -5,3 +5,7 @@ variable "count_of_null_resources" {
 variable "file_message" {
   type = string
 }
+
+variable "file_to_show" {
+  type = string
+}
