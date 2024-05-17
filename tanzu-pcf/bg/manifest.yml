@@ -1,5 +1,5 @@
 applications:
-- name: vasttest_bg_app#vltest
+- name: ((APP_NAME))
   memory: ((APP_MEMORY))
   instances: ((INSTANCES))
   routes:
