@@ -7,7 +7,7 @@ output "test-output-name2" {
 }
 
 output "clusters_discovered" {
-    value = []
+    value = [
         "test-use1-blue",
         "test-use1-green"
     ]
