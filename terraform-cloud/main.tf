@@ -12,7 +12,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "harness-dev"
     workspaces {
-      name = "vl_local_tf_cloud_1"
+      name = "vl-prerequisites-cloud-run-1"
     }
   }
 }
@@ -26,4 +26,10 @@ resource "null_resource" "example1" {
   provisioner "local-exec" {
     command = "echo vlvllvlvlvl"
   }
+}
+
+
+resource "local_file" "hello1" {
+  content  = "Hello, Terraform"
+  filename = "hello1.txt"
 }
