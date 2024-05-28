@@ -12,7 +12,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "harness-dev"
     workspaces {
-      name = "vl_local_tf_cloud_1"
+      name = "vl-prerequisites-cloud-run-1"
     }
   }
 }
