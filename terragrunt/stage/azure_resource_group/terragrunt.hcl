@@ -2,8 +2,8 @@ terraform {
   #source = "../..//modules/azure-resource-group-local"
   #source = "git@github.com:rkoosaar/terraform-azurerm-resource-group.git//." # this is ssh also
   #source = "git::git@github.com:rkoosaar/terraform-azurerm-resource-group.git//."  # this is ssh also
-  #source = "git::https://github.com/rkoosaar/terraform-azurerm-resource-group.git//."
-  source = "github.com/rkoosaar/terraform-azurerm-resource-group//."  #no need of credentials it's http
+  source = "git::https://github.com/vlica-harness/azure-resource-group.git//."
+  #source = "github.com/rkoosaar/terraform-azurerm-resource-group//."  #no need of credentials it's http
 }
 
 
