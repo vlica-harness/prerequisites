@@ -1,4 +1,4 @@
 APP_MEMORY: 1024M
 INSTANCES: 1
-APP_NAME: vasttest_bg_app_2
+APP_NAME: vasttest_bg_app_3
 ACTIVE_ROUTE: vasttest_bg_app.apps.tas-qa-setup.com
