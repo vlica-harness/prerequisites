@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: <+artifact.image>
+          image: {{ .Values.harnessImage}}
   replicas: 1
   selector:
     matchLabels:
