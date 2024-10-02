@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx-container
+          image: <+artifact.image>
   replicas: 1
   selector:
     matchLabels:
