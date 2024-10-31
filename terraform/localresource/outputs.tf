@@ -6,6 +6,11 @@ output "test-output-name2" {
   value = "test-output-value2"
 }
 
+output "instance_type" {
+  value = "t2.small"
+}
+
+
 
 output "hostInstancesss" {
   value = [
