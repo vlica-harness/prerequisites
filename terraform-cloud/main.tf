@@ -21,6 +21,11 @@ variable "countt" {
   type = number
 }
 
+variable "name" {
+  type = string
+}
+
+
 resource "null_resource" "example1" {
   count = var.countt
   provisioner "local-exec" {
@@ -30,6 +35,6 @@ resource "null_resource" "example1" {
 
 
 resource "local_file" "hello1" {
-  content  = "Hello, Terraform"
+  content  = "${var.name}-bucket"
   filename = "hello1.txt"
 }
