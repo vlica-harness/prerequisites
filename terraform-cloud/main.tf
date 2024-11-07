@@ -21,6 +21,11 @@ variable "countt" {
   type = number
 }
 
+variable "name" {
+  type = string
+}
+
+
 
 resource "null_resource" "example1" {
   count = var.countt
@@ -29,3 +34,7 @@ resource "null_resource" "example1" {
   }
 }
 
+ resource "local_file" "hello1" {
+   content  = "${var.name}"
+   filename = "hello1.txt"
+ }
