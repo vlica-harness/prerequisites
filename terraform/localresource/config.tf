@@ -1,4 +1,5 @@
 variable "swagger_file" {
+  default = "swagger.json"
 }
 
 
