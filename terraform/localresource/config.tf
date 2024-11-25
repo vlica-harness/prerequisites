@@ -1,20 +1,11 @@
-variable "countt" {
-  type = number
-}
-
-variable "counttt" {
-  type = number
+variable "swag_file" {
+  default = "config.tmpl" # Path to the template file
 }
 
 
-resource "null_resource" "example" {
-  count = var.countt + var.counttt
-  provisioner "local-exec" {
-    command = "echo testlocallocaltesttestlocallocaltest"
-  }
-}
+resource "local_file" "rendered_config" {
+  filename = "output_config.conf" # Output file
 
-resource "local_file" "hello1" {
-  content  = "Hello, Terraform"
-  filename = "hello1.txt"
+  # Use the templatefile function to populate the content
+  content = templatefile(var.swag_file {})
 }
