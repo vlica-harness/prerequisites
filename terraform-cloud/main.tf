@@ -12,7 +12,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "harness-dev"
     workspaces {
-      name = "vl-workspace-prereq-test-1"
+      prefix = "vl-workspace-"
     }
   }
 }
