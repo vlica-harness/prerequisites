@@ -35,10 +35,10 @@ resource "null_resource" "example1" {
 }
 
 
-resource "local_file" "hello1" {
-  content  = "Hello, Terraform"
-  filename = "hello1.txt"
-}
+#resource "local_file" "hello1" {
+#  content  = "Hello, Terraform"
+#  filename = "hello1.txt"
+#}
 
 # AWS EC2 Instance resource
 resource "aws_instance" "my_ec2_instance" {
