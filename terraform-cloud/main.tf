@@ -40,19 +40,16 @@ resource "null_resource" "example1" {
 #  filename = "hello1.txt"
 #}
 
-# AWS EC2 Instance resource
 resource "aws_instance" "my_ec2_instance" {
   ami           = "ami-071226ecf16aa7d96"  # Replace with the appropriate AMI ID for your region
   instance_type = "t2.micro"  # Choose an instance type according to your needs
 
-  # Optional: Tag the EC2 instance
   tags = {
     Name = "vl-refresh-approval"
   }
 
-  # Optional: Example of user data to configure the instance on startup
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > /var/www/html/index.html
+              echo "Hello, World 1" > /var/www/html/index.html
               EOF
 }
