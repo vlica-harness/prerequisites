@@ -46,7 +46,7 @@ resource "aws_instance" "my_ec2_instance" {
 
   tags = {
     Name = "vl-refresh-approval"
-#    Environment = "dev-1"
+    Environment = "dev-11"
   }
 
   user_data = <<-EOF
