@@ -4,3 +4,4 @@ applications:
   instances: ((INSTANCES))
   routes:
   - route: ((ACTIVE_ROUTE))
+  random-route: true
