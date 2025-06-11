@@ -7,15 +7,25 @@
 #  }
 #}
 
-terraform {
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "harness-dev"
-    workspaces {
-      prefix = "vl-workspace-"
-    }
-  }
-}
+#terraform {
+#  backend "remote" {
+#    hostname     = "app.terraform.io"
+#    organization = "harness-dev"
+#    workspaces {
+#      prefix = "vl-workspace-"
+#    }
+#  }
+#}
+
+#terraform {
+#    backend "remote" {
+#        hostname = "harness.jfrog.io"
+#        organization = "da-dev-tf-test"
+#        workspaces {
+#            prefix = "mypref-"
+#        }
+#    }
+#}
 
 variable "countt" {
   type = number
