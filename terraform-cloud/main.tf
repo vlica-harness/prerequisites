@@ -17,6 +17,8 @@
 #  }
 #}
 
+backend "remote" {}
+
 #terraform {
 #    backend "remote" {
 #        hostname = "harness.jfrog.io"
