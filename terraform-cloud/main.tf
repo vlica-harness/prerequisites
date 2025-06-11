@@ -17,7 +17,7 @@
 #  }
 #}
 
-backend "remote" {}
+#backend "remote" {}
 
 #terraform {
 #    backend "remote" {
