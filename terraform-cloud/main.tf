@@ -17,24 +17,24 @@
 #  }
 #}
 
-terraform {  
-  backend "remote" {}
-}
+#terraform {  
+#  backend "remote" {}
+#}
 
 
 #terraform {
 #  backend "remote" {}
 #}
 
-#terraform {
-#    backend "remote" {
-#        hostname = "harness.jfrog.io"
-#        organization = "da-dev-tf-test"
-#        workspaces {
-#            prefix = "mypref-"
-#        }
-#    }
-#}
+terraform {
+    backend "remote" {
+        hostname = "harness.jfrog.io"
+        organization = "da-vl-test-1"
+        workspaces {
+            prefix = "mypref-"
+        }
+    }
+}
 
 variable "countt" {
   type = number
