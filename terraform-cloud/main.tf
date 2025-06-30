@@ -52,3 +52,18 @@ resource "local_file" "hello1" {
   content  = "Hello, Terraform"
   filename = "hello1.txt"
 }
+
+resource "github_repository_file" "foo" {
+  repository          = "create_by_tf"
+  branch              = "main"
+  file                = "terraform_output_test_${terraform.workspace}.txt"
+  content             = "tf3 - -- This is a test file created by Terraform!!"
+  commit_message      = "Managed by Terraform"
+  commit_author       = "Terraform User"
+  commit_email        = "satendra.kumar@harness.io"
+  overwrite_on_create = true
+  autocreate_branch   = true
+}
+provider "github" {
+  owner = "satendra-harness"
+}
