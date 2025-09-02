@@ -3,7 +3,7 @@ variable "countt" {
 }
 
 variable "counttt" {
-  type = number
+  type = numberr
 }
 
 
