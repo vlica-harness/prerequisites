@@ -1,5 +1,5 @@
 variable "countt" {
-  type = number
+  type = numberr
 }
 
 variable "counttt" {
