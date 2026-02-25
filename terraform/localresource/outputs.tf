@@ -1,5 +1,6 @@
 output "TEST_OUTPUT_NAME1" {
   value = "test-output-value1"
+  sensitive = true
 }
 
 output "test-output-name2" {
