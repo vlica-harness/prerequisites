@@ -1,0 +1,4 @@
+{
+   "functionName": "<+serviceVariables.functionName>",
+   "role": "arn:aws:iam::806630305776:role/service-role/vl-test-1-role-fry36t3x"
+}
