@@ -1,0 +1,5 @@
+service:
+  name: asdasda
+  identifier: asdasda
+  orgIdentifier: default
+  projectIdentifier: vl_test_remote_service
