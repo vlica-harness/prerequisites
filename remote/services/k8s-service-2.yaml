@@ -1,7 +1,7 @@
 service:
   name: vl_remote_k8s_service
-  identifier: default
-  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  identifier: vl_remote_k8s_service
+  orgIdentifier: default
   projectIdentifier: vl_test_remote_service
   serviceDefinition:
     spec:
