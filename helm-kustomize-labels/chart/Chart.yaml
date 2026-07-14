@@ -1,0 +1,6 @@
+apiVersion: v2
+name: demo-app
+description: Minimal demo chart used to show Kustomize post-renderer label injection. Note there are NO label placeholders anywhere in this chart — labels are injected externally.
+type: application
+version: 0.1.0
+appVersion: "1.0"
