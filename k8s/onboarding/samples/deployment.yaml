@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: harness-nginx-app-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harness-nginx-app-example
+  template:
+    metadata:
+      labels:
+        app: harness-nginx-app-example
+    spec:
+      containers:
+        - name: harness-nginx-app-example
+          image: nginx
