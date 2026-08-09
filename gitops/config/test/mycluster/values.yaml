@@ -1,1 +1,6 @@
-aaa: aaaaaa
+endpoint: https://api.us-east-1.example.com
+envName: myname
+image:
+  tag: v2.5.0
+region: us-east-1
+replicas: 3
