@@ -1,4 +1,11 @@
-# K8S Deployments example
+apiVersion: v1
+kind: Secret
+metadata:
+  name: regcred
+type: kubernetes.io/dockerconfigjson
+stringData:
+  .dockerconfigjson: {{ .Values.imagePullSecret }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,6 +14,10 @@ metadata:
     app: myapp
     type: front-end
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: front-end
   template:
     metadata:
       name: myapp-pod
@@ -14,10 +25,8 @@ spec:
         app: myapp
         type: front-end
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: nginx-container
-          image: {{ .Values.image}}
-  replicas: 1
-  selector:
-    matchLabels:
-      type: front-end
+          image: {{ .Values.image }}
