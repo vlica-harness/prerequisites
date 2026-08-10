@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: nginx
+          image: {{ .Values.image}}
   replicas: 1
   selector:
     matchLabels:
