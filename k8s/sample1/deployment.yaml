@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: regcred
 type: kubernetes.io/dockerconfigjson
-stringData:
+data:
   .dockerconfigjson: {{ .Values.imagePullSecret }}
 ---
 apiVersion: apps/v1
