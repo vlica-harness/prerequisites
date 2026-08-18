@@ -1,0 +1,5 @@
+# Public image so no artifact/registry wiring is needed for the demo
+image:
+  repository: nginx
+  tag: stable
+replicaCount: 1
