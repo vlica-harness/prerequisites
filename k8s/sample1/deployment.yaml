@@ -17,7 +17,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      type: front-end
   template:
     metadata:
       name: myapp-pod
