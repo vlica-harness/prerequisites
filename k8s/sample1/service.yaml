@@ -4,10 +4,12 @@ metadata:
   name: myapp-service
   labels:
     app: myapp
+    type: front-end
 spec:
   type: ClusterIP
   selector:
     app: myapp
+    type: front-end
   ports:
     - protocol: TCP
       port: 80
